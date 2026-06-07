@@ -10,6 +10,10 @@ public class UpdateDemo {
 
         System.out.println("Current Student Name :" +name);
 
+        if (name.equals(newName)){
+            System.out.println("No update needed");
+        }
+
     }
 
 }
