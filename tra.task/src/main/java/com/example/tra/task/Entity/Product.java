@@ -1,4 +1,4 @@
-package com.example.tra.task;
+package com.example.tra.task.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

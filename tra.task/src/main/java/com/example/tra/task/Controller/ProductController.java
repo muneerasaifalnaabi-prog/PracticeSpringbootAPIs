@@ -1,5 +1,6 @@
-package com.example.tra.task;
+package com.example.tra.task.Controller;
 
+import com.example.tra.task.Entity.Product;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
