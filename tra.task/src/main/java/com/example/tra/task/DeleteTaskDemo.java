@@ -13,7 +13,9 @@ public class DeleteTaskDemo {
         tasks.add("Finish report");
 
         System.out.println("Task List :: ");
-        for (String task :tasks)
+        for (String task :tasks){
+            System.out.println("- " + task);
+        }
 
 
 
