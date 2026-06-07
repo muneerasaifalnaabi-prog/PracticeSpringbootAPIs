@@ -4,24 +4,27 @@ public class UpdateDemo {
     public static void main(String[] args) {
 
 
-        String currentName = "Muneera";
-        String newName = "Reem";
-        Boolean status = false;
+        String currentName = "Ahmed";
+        String newName = "Ali";
+        String status ;
 
         System.out.println("Current Student Name :" +currentName);
 
         if (currentName.equals(newName)){
-            System.out.println("No update needed");
+            System.out.println("Names are identical");
+            System.out.println("No update is performed");
+            status="No Change Required";
         }
         else {
+            System.out.println("Names are different");
+            System.out.println("Updating student name...");
             currentName  = newName;
-            status=true;
+            status="Successful";
             System.out.println("Student Name Updated successfully ");
         }
+
         System.out.println("Current Student Name :" + currentName);
         System.out.println("updated status :" +status);
-
-
 
     }
 
