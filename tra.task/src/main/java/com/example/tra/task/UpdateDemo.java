@@ -13,6 +13,12 @@ public class UpdateDemo {
         if (name.equals(newName)){
             System.out.println("No update needed");
         }
+        else {
+            name  = newName;
+            status=true;
+
+
+        }
 
     }
 
