@@ -19,8 +19,9 @@ public class ProductController {
         productData.put(1,new Product("2","Phone",20));
 
         if (productData.containsKey(id)){
-            return "Product not found"
+            return "Product not found";
         }
+        Product product =productData.get(id);
 
     }
 
