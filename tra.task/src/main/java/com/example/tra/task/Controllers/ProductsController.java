@@ -1,6 +1,5 @@
-package com.example.tra.task.Controller;
+package com.example.tra.task.Controllers;
 
-import com.example.tra.task.Entity.Product1;
 import com.example.tra.task.Services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;

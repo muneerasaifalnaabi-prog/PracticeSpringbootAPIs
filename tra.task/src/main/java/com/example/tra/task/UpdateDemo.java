@@ -1,7 +1,7 @@
 package com.example.tra.task;
 
-import com.example.tra.task.Entity.Student;
-import com.example.tra.task.Entity.UserProfile;
+import com.example.tra.task.Entities.Student;
+import com.example.tra.task.Entities.UserProfile;
 
 public class UpdateDemo {
     public static void main(String[] args) {

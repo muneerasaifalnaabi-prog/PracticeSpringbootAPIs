@@ -1,6 +1,6 @@
-package com.example.tra.task.Controller;
+package com.example.tra.task.Controllers;
 
-import com.example.tra.task.Entity.Student;
+import com.example.tra.task.Entities.Student;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

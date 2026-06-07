@@ -1,4 +1,4 @@
-package com.example.tra.task.Controller;
+package com.example.tra.task.Controllers;
 
 import com.example.tra.task.Services.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package com.example.tra.task.Controller;
+package com.example.tra.task.Controllers;
 
-import com.example.tra.task.Entity.Order;
+import com.example.tra.task.Entities.Order;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;

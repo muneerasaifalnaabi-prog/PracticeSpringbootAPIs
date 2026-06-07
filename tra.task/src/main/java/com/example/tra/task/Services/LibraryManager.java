@@ -1,6 +1,6 @@
 package com.example.tra.task.Services;
 
-import com.example.tra.task.Entity.LibraryMember;
+import com.example.tra.task.Entities.LibraryMember;
 
 import java.util.ArrayList;
 
