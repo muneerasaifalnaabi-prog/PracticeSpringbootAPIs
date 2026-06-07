@@ -2,6 +2,12 @@ package com.example.tra.task;
 
 public class UpdateDemo {
     public static void main(String[] args) {
+        UserProfile userProfile = new UserProfile(
+                "101",
+                "0712345678",
+                " Muscat, Oman"
+        );
+
 
         String currentName = "Ahmed";
         String newName = "Ali";
@@ -38,6 +44,21 @@ public class UpdateDemo {
         System.out.println("Student ID: " + student.getStudentId());
         System.out.println("Student Name: " + student.getStudentName());
         System.out.println("Grade: " + student.getGrade());
+
+
+        System.out.println("task6: ===============================================");
+        System.out.println("---User Profile---");
+        System.out.println("User Id :" +userProfile.getUserId());
+        System.out.println("Phone Numbers :"+ userProfile.getPhoneNumber());
+        System.out.println("Address :" +userProfile.getAddress());
+
+        userProfile.setPhoneNumber("0798765432");
+        userProfile.setAddress(" Ruwi, Muscat ");
+
+        System.out.println("---Update User Profile---");
+        System.out.println("User Id :" +userProfile.getUserId());
+        System.out.println("Phone Numbers :"+ userProfile.getPhoneNumber());
+        System.out.println("Address :" +userProfile.getAddress());
 
 
     }
