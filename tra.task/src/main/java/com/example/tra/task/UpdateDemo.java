@@ -18,7 +18,8 @@ public class UpdateDemo {
             status=true;
             System.out.println("Student Name Updated successfully ");
         }
-        System.out.println("");
+        System.out.println("Current Student Name :" + currentName);
+
 
 
     }
