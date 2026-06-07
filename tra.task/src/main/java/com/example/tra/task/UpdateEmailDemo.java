@@ -16,14 +16,10 @@ public class UpdateEmailDemo {
             updateStatus = true;
             System.out.println("Email Updated successfully");
             System.out.println("updated Email : " + currentEmail);
-        }
-        else {
+        } else {
             System.out.println("No update Required");
-
-
         }
-
-
+        System.out.println("update Status: " + updateStatus);
 
 
     }
