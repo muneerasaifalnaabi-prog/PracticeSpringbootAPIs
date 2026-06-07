@@ -1,7 +1,16 @@
 package com.example.tra.task;
 
 public class UpdateEmailDemo {
-    String currentEmail = "ahmed@gmail.com";
-    String newEmail ="ali@gmail.com";
-    boolean updateStatus =false;
+    public static void main(String[] args) {
+
+
+        String currentEmail = "ahmed@gmail.com";
+        String newEmail = "ali@gmail.com";
+        boolean updateStatus = false;
+
+        //original Email :
+        System.out.println("Current Email :" + currentEmail);
+
+
+    }
 }
