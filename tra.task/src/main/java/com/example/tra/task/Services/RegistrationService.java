@@ -30,10 +30,17 @@ public class RegistrationService {
                 deletedIds.add(id);
             }
             else {
+                notFoundIds.add(id);
 
             }
         }
+        Map<String, Object> response = new HashMap<>();
+        response.put("totalRequested", ids.size());
+        response.put("deletedSuccessfully", deletedIds.size());
+        response.put("deletedIds", deletedIds);
+        response.put("notFoundIds", notFoundIds);
 
+        return response;
 
     }
 
