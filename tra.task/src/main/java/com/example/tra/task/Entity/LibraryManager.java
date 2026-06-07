@@ -3,34 +3,48 @@ package com.example.tra.task.Entity;
 import java.util.ArrayList;
 
 public class LibraryManager {
-    private ArrayList<LibraryMember> members= new ArrayList<>();
+    private ArrayList<LibraryMember> members = new ArrayList<>();
 
-    public void  initializeMembers(){
+    public void initializeMembers() {
         members.add(new LibraryMember("M101", "Ahmed", "Standard"));
         members.add(new LibraryMember("M102", "Sara", "Premium"));
         members.add(new LibraryMember("M103", "John", "Standard"));
 
     }
-    public void addMember(LibraryMember member){
+
+    public void addMember(LibraryMember member) {
         members.add(member);
     }
 
     public void displayMembers() {
         System.out.println("Library Members");
-        if (members.isEmpty()){
+        if (members.isEmpty()) {
             System.out.println("No members found ");
             return;
         }
-        for (LibraryMember member :members){
+        for (LibraryMember member : members) {
             System.out.println(
                     member.getMemberId() + "->"
-                    +member.getFullName()+" ->"
-                    +member.getMembershipType()
+                            + member.getFullName() + " ->"
+                            + member.getMembershipType()
             );
 
         }
     }
-    public  boolean deleteMemberById(String memberId)
 
+    public boolean deleteMemberById(String memberId) {
+        for (int i = 0; i < members.size(); i++) {
 
+            if (members.get(i).getMemberId().equalsIgnoreCase(memberId)) {
+                members.remove(i);
+                System.out.println("Member " +i +"has been deleted ..");
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
+
+
+
