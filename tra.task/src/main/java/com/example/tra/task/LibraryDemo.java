@@ -8,6 +8,9 @@ public class LibraryDemo {
         LibraryManager manager = new LibraryManager();
         manager.initializeMembers();
 
+        System.out.println("Before Deletion :");
+        manager.displayMembers();
+
 
     }
 }
