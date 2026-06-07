@@ -11,5 +11,9 @@ public class LibraryManager {
         members.add(new LibraryMember("M103", "John", "Standard"));
 
     }
+    public void addMember(LibraryMember member){
+        members.add(member);
+    }
+
 
 }
