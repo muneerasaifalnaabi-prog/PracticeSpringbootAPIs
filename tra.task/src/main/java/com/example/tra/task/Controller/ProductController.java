@@ -7,18 +7,19 @@ import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@NoArgsConstructor
-@Data
-@AllArgsConstructor
+
+@RestController
 public class ProductController {
     Map<Integer, Product> productData = new HashMap<>();
 
+
     @PutMapping("/updateStock/{id}")
-    public String updateStock(@PathVariable String id, @RequestParam Integer newStock) {
+    public String updateStock(@PathVariable Integer id, @RequestParam Integer newStock) {
         productData.put(1, new Product(1, "Laptop", 10));
         productData.put(2, new Product(2, "Phone", 20));
 
@@ -30,7 +31,7 @@ public class ProductController {
 
         product.setStockQuantity(newStock);
 
-        return "Product Updated Successfully\n"
+        return "Product Updated Successfully\n "
                 + "Product Name: " + product.getProductName() + "\n"
                 + "Previous Stock: " + oldStock + "\n"
                 + "Updated Stock: " + product.getStockQuantity();
