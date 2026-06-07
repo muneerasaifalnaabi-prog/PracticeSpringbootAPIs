@@ -19,7 +19,7 @@ public class RegistrationService {
         registrations.put(103, new EventRegistration(103, "John"));
         registrations.put(104, new EventRegistration(104, "Ali"));
     }
-    public Map<String, Object> deleteMultipleByIds(List<Integer> ids) {
+    public String  deleteMultipleByIds(List<Integer> ids) {
         List<Integer> deletedIds = new ArrayList<>();
         List<Integer> notFoundIds = new ArrayList<>();
 
@@ -34,14 +34,11 @@ public class RegistrationService {
 
             }
         }
-        Map<String, Object> response = new HashMap<>();
-        response.put("totalRequested", ids.size());
-        response.put("deletedSuccessfully", deletedIds.size());
-        response.put("deletedIds", deletedIds);
-        response.put("notFoundIds", notFoundIds);
-
-        return response;
-
+        return "Bulk Deletion Completed\n"
+                + "Total Requested: " + ids.size() + "\n"
+                + "Deleted Successfully: " + deletedIds.size() + "\n"
+                + "Deleted IDs: " + deletedIds + "\n"
+                + "Not Found IDs: " + notFoundIds;
     }
 
 
