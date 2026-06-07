@@ -15,6 +15,11 @@ public class Application {
 				"Muscat"
 		);
 
+		System.out.println("---User Profile---");
+		System.out.println("User Id :" +userProfile.getUserId());
+		System.out.println("Phone Numbers :"+ userProfile.getPhoneNumber());
+		System.out.println("Address :" +userProfile.getAddress());
+
 	}
 
 }
