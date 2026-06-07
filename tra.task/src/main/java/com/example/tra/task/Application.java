@@ -23,6 +23,11 @@ public class Application {
 		userProfile.setPhoneNumber("999324435");
 		userProfile.setAddress("Ibra");
 
+		System.out.println("---Update User Profile---");
+		System.out.println("User Id :" +userProfile.getUserId());
+		System.out.println("Phone Numbers :"+ userProfile.getPhoneNumber());
+		System.out.println("Address :" +userProfile.getAddress());
+
 	}
 
 }
