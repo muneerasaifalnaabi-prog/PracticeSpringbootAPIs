@@ -22,6 +22,10 @@ public class ProductController {
             return "Product not found";
         }
         Product product =productData.get(id);
+        Integer oldStock = product.getStockQuantity();
+
+        product.setStockQuantity(newStock);
+
 
     }
 
