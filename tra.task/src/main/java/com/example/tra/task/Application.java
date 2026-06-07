@@ -20,6 +20,9 @@ public class Application {
 		System.out.println("Phone Numbers :"+ userProfile.getPhoneNumber());
 		System.out.println("Address :" +userProfile.getAddress());
 
+		userProfile.setPhoneNumber("999324435");
+		userProfile.setAddress("Ibra");
+
 	}
 
 }
