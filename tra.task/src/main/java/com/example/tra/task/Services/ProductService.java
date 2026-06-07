@@ -13,7 +13,15 @@ public class ProductService {
         productMap.put(3, new Product(3, "Tablet", 200));
     }
 
-    public  String deleteProductById(Integer pid){
+    public String deleteProductById(Integer pid) {
+        if (productMap.containsKey(pid)) {
+            Product product = productMap.get(pid);
+            productMap.remove(pid);
+            return "Product Deleted Successfully\n"
+                    + "Product ID: " + product.getPid() + "\n"
+                    + "Product Name: " + product.getProductName();
+        }
+        return "product not found";
 
     }
 
