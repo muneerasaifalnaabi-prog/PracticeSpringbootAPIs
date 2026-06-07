@@ -8,7 +8,9 @@ import java.util.HashMap;
 @Service
 public class ProductService {
     HashMap<Integer, Product> productMap = new HashMap<>();
-
+    public ProductService() {
+        loadSampleProducts();
+    }
     public void loadSampleProducts() {
         productMap.put(1, new Product(1, "Laptop", 500));
         productMap.put(2, new Product(2, "Phone", 300));
