@@ -18,6 +18,12 @@ public class OrderController {
     public String updateOrder(@PathVariable int orderId, @RequestParam String shippingAddress, @RequestParam String orderStatus){
         orderData.put(1,new Order("1", "Muscat, Oman", "Pending"));
 
+        if(!orderData.containsKey(orderId)){
+            return "Order Not Found";
+        }
+        Order order =orderData.get(orderId);
+
+
 
 
     }
