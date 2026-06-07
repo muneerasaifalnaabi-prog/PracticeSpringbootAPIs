@@ -26,9 +26,10 @@ public class UpdateDemo {
         System.out.println("Current Student Name :" + currentName);
         System.out.println("updated status :" +status);
 */
+
+        Student student = new Student("101", "Ahmed", "A");
+        System.out.println("----student's original details----  ");
+
+
     }
-    Student student = new Student("101","Ahmed","A");
-
-
-
 }
