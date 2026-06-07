@@ -24,7 +24,12 @@ public class DeleteTaskDemo {
             if (tasks.get(i).equalsIgnoreCase(targetTask)){
                 tasks.remove(i);
                 found=true;
+                System.out.println(targetTask + " Deleted successfully");
+                break;
             }
+        }
+        if (!found){
+            System.out.println("task not found !");
 
         }
 
