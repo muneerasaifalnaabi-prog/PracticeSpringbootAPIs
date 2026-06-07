@@ -10,26 +10,33 @@ import java.util.Map;
 
 @RestController
 public class OrderController {
-    Map<Integer,Order> orderData =new HashMap<>();
-
+    Map<Integer, Order> orderData = new HashMap<>();
 
 
     @PutMapping("/updateOrder/{orderId}")
-    public String updateOrder(@PathVariable int orderId, @RequestParam String shippingAddress, @RequestParam String orderStatus){
-        orderData.put(1,new Order("1", "Muscat, Oman", "Pending"));
+    public String updateOrder(@PathVariable int orderId, @RequestParam String shippingAddress, @RequestParam String orderStatus) {
+        orderData.put(1, new Order("1", "Muscat, Oman", "Pending"));
 
-        if(!orderData.containsKey(orderId)){
+        if (!orderData.containsKey(orderId)) {
             return "Order Not Found";
         }
-        Order order =orderData.get(orderId);
+        Order order = orderData.get(orderId);
+
+        String oldAddress = order.getShippingAddress();
+        String oldStatus = order.getOrderStatus();
 
         order.setShippingAddress(shippingAddress);
         order.setOrderStatus(orderStatus);
 
 
-
-
+        return "Order Updated Successfully\n"
+                + "Order ID: " + order.getOrederId() + "\n"
+                + "Old Address: " + oldAddress + " → New: " + order.getShippingAddress() + "\n"
+                + "Old Status: " + oldStatus + " → New: " + order.getOrderStatus();
     }
 
 
 }
+
+
+
