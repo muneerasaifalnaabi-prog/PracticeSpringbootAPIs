@@ -21,6 +21,10 @@ public class DeleteTaskDemo {
         Boolean found =false;
 
         for (int i =0;i<tasks.size();i++){
+            if (tasks.get(i).equalsIgnoreCase(targetTask)){
+                tasks.remove(i);
+                found=true;
+            }
 
         }
 
