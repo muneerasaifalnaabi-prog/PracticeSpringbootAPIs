@@ -1,5 +1,6 @@
 package com.example.tra.task;
 
 public class UpdateEmailDemo {
-    String currentEma;
+    String currentEmail = "ahmed@gmail.com";
+    String newEmail ="ali@gmail.com";
 }
