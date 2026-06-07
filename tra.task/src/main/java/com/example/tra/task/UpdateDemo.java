@@ -3,7 +3,7 @@ package com.example.tra.task;
 public class UpdateDemo {
     public static void main(String[] args) {
 
-
+/*  Task 26
         String currentName = "Ahmed";
         String newName = "Ali";
         String status ;
@@ -25,7 +25,10 @@ public class UpdateDemo {
 
         System.out.println("Current Student Name :" + currentName);
         System.out.println("updated status :" +status);
-
+*/
     }
+    Student student = new Student("101","Ahmed","A");
+
+
 
 }
