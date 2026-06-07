@@ -15,6 +15,10 @@ public class UpdateEmailDemo {
             currentEmail=newEmail;
             updateStatus=true;
 
+            System.out.println("Email Updated successfully");
+            System.out.println("updated Email : "+ currentEmail);
+
+
         }
 
 
