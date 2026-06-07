@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class StudentController {
 
-    Student student = new Student("101","Ali","A");
+    Student student = new Student("101", "Ali", "A");
 
     @PutMapping("/updateStudent")
-    public String updateStudent(@RequestParam String newName){
-        String oldName= student.getStudentName();
+    public String updateStudent(@RequestParam String newName) {
+        String oldName = student.getStudentName();
         student.setStudentName(newName);
-        return "Student Name Updated Successfully! \n "+
+        return "Student Name Updated Successfully! \n " +
                 "Student ID: " + student.getStudentId() + "\n" +
-                "New Student Name:  " + student.getStudentName()+ "\n"+
-                " Grade :" +student.getGrade();
+                "New Student Name:  " + student.getStudentName() + "\n" +
+                " Grade :" + student.getGrade();
     }
 }
