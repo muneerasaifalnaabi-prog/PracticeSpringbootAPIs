@@ -11,13 +11,15 @@ public class StudentController {
     Student student = new Student("101", "Ali", "A");
 
     @PutMapping("/updateStudent")
-    public String updateStudent(@RequestParam String newStudent) {
-        System.out.println(" The Current Student Name" +student.getStudentName());
-        if (!student.getStudentName().equals(newStudent)){
+    public void updateStudent(@RequestParam String newStudent) {
+        System.out.println(" The Current Student Name" + student.getStudentName());
+        if (!student.getStudentName().equals(newStudent)) {
             System.out.println("Student name Updated Successfully!");
-            System.out.println("Student ID :"+student.getStudentId());
-            System.out.println("student name : "+newStudent);
-            System.out.println("Student Grade : " +student.getGrade());
+            System.out.println("Student ID :" + student.getStudentId());
+            System.out.println("student name : " + newStudent);
+            System.out.println("Student Grade : " + student.getGrade());
+        } else {
+            System.out.println("No update is performed");
         }
 
     }
