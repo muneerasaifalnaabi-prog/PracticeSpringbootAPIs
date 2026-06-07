@@ -18,13 +18,18 @@ public class ProductController {
         productData.put(1,new Product("1","Laptop",10));
         productData.put(1,new Product("2","Phone",20));
 
-        if (productData.containsKey(id)){
+        if (!productData.containsKey(id)){
             return "Product not found";
         }
         Product product =productData.get(id);
         Integer oldStock = product.getStockQuantity();
 
         product.setStockQuantity(newStock);
+
+        return "Product Updated Successfully\n"
+                + "Product Name: " + product.getProductName()+ "\n"
+                + "Previous Stock: " + oldStock + "\n"
+                + "Updated Stock: " + product.getStockQuantity();
 
 
     }
