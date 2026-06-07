@@ -29,6 +29,9 @@ public class UpdateDemo {
 
         Student student = new Student("101", "Ahmed", "A");
         System.out.println("----student's original details----  ");
+        System.out.println("Student ID: " + student.getStudentId());
+        System.out.println("Student Name: " + student.getStudentName());
+        System.out.println("Grade: " + student.getGrade());
 
 
     }
