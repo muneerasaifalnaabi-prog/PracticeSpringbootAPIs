@@ -35,6 +35,12 @@ public class UpdateDemo {
 
         student.setStudentName("Ali");
 
+        System.out.println("----student's updated details----  ");
+        System.out.println("Student ID: " + student.getStudentId());
+        System.out.println("Student Name: " + student.getStudentName());
+        System.out.println("Grade: " + student.getGrade());
+
+
 
     }
 }
