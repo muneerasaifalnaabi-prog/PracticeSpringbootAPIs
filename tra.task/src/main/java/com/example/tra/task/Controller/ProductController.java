@@ -19,7 +19,8 @@ public class ProductController {
 
     @PutMapping("/updateStock/{id}")
     public String updateStock(@PathVariable String id, @RequestParam Integer newStock) {
-
+        productData.put(1, new Product(1, "Laptop", 10));
+        productData.put(2, new Product(2, "Phone", 20));
 
         if (!productData.containsKey(id)) {
             return "Product not found";
