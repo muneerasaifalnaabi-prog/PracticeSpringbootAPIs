@@ -1,9 +1,11 @@
 package com.example.tra.task.Services;
 
 import com.example.tra.task.Entity.Product;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 
+@Service
 public class ProductService {
     HashMap<Integer, Product> productMap = new HashMap<>();
 
