@@ -30,6 +30,7 @@ public class LibraryManager {
 
         }
     }
+    public  boolean deleteMemberById(String memberId)
 
 
 }
