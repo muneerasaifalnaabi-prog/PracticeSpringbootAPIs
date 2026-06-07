@@ -4,21 +4,21 @@ public class UpdateDemo {
     public static void main(String[] args) {
 
 
-        String name = "Muneera";
+        String currentName = "Muneera";
         String newName = "Reem";
         Boolean status = false;
 
-        System.out.println("Current Student Name :" +name);
+        System.out.println("Current Student Name :" +currentName);
 
-        if (name.equals(newName)){
+        if (currentName.equals(newName)){
             System.out.println("No update needed");
         }
         else {
-            name  = newName;
+            currentName  = newName;
             status=true;
-
-
+            System.out.println("Student Name Updated successfully ");
         }
+
 
     }
 
