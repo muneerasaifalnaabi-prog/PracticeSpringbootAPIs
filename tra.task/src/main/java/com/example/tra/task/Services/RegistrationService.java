@@ -23,6 +23,17 @@ public class RegistrationService {
         List<Integer> deletedIds = new ArrayList<>();
         List<Integer> notFoundIds = new ArrayList<>();
 
+        for (Integer id :ids){
+            if (registrations.containsKey(id)) {
+
+                registrations.remove(id);
+                deletedIds.add(id);
+            }
+            else {
+
+            }
+        }
+
 
     }
 
