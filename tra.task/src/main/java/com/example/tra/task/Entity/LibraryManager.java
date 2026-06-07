@@ -37,7 +37,6 @@ public class LibraryManager {
 
             if (members.get(i).getMemberId().equalsIgnoreCase(memberId)) {
                 members.remove(i);
-                System.out.println("Member " +i +"has been deleted ..");
                 return true;
             }
         }
