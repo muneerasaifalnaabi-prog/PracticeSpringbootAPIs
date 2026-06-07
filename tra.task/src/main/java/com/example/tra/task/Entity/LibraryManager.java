@@ -19,10 +19,16 @@ public class LibraryManager {
         System.out.println("Library Members");
         if (members.isEmpty()){
             System.out.println("No members found ");
+            return;
         }
-        for (LibraryMember member :members)
+        for (LibraryMember member :members){
+            System.out.println(
+                    member.getMemberId() + "->"
+                    +member.getFullName()+" ->"
+                    +member.getMembershipType()
+            );
 
-
+        }
     }
 
 
