@@ -23,6 +23,9 @@ public class OrderController {
         }
         Order order =orderData.get(orderId);
 
+        order.setShippingAddress(shippingAddress);
+        order.setOrderStatus(orderStatus);
+
 
 
 
