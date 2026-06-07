@@ -24,7 +24,7 @@ public class DeleteTaskDemo {
             if (tasks.get(i).equalsIgnoreCase(targetTask)){
                 tasks.remove(i);
                 found=true;
-                System.out.println(targetTask + " Deleted successfully");
+                System.out.println("==>"+targetTask + " Deleted successfully");
                 break;
             }
         }
@@ -33,7 +33,9 @@ public class DeleteTaskDemo {
 
         }
         System.out.println("Final Task List : ");
-        for ()
+        for (String task:tasks){
+            System.out.println("- " + task);
+        }
 
 
     }
