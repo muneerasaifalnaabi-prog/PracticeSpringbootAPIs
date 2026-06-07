@@ -11,12 +11,14 @@ public class UpdateEmailDemo {
         //original Email :
         System.out.println("Current Email :" + currentEmail);
 
-        if (!currentEmail.equalsIgnoreCase(newEmail)){
-            currentEmail=newEmail;
-            updateStatus=true;
-
+        if (!currentEmail.equalsIgnoreCase(newEmail)) {
+            currentEmail = newEmail;
+            updateStatus = true;
             System.out.println("Email Updated successfully");
-            System.out.println("updated Email : "+ currentEmail);
+            System.out.println("updated Email : " + currentEmail);
+        }
+        else {
+            System.out.println("No update Required");
 
 
         }
