@@ -16,7 +16,7 @@ public class StudentController {
         student.setStudentName(newName);
         return "Student Name Updated Successfully! \n "+
                 "Student ID: " + student.getStudentId() + "\n" +
-                "New Student Name: " + student.getStudentName()+
-                "Grade :" +student.getGrade();
+                "New Student Name:  " + student.getStudentName()+ "\n"+
+                " Grade :" +student.getGrade();
     }
 }
