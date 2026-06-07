@@ -31,7 +31,7 @@ public class OrderController {
 
 
         return "Order Updated Successfully\n"
-                + "Order ID: " + order.getOrederId() + "\n"
+                + "Order ID: " + order.getOrderId() + "\n"
                 + "Old Address: " + oldAddress + " → New: " + order.getShippingAddress() + "\n"
                 + "Old Status: " + oldStatus + " → New: " + order.getOrderStatus();
     }
