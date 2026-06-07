@@ -16,6 +16,11 @@ public class LibraryManager {
     }
 
     public void displayMembers() {
+        System.out.println("Library Members");
+        if (members.isEmpty()){
+            System.out.println("No members found ");
+        }
+        for (LibraryMember member :members)
 
 
     }
