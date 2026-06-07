@@ -3,7 +3,7 @@ package com.example.tra.task;
 public class UpdateDemo {
     public static void main(String[] args) {
 
-/*  Task 26
+/*  Task 26 :
         String currentName = "Ahmed";
         String newName = "Ali";
         String status ;
