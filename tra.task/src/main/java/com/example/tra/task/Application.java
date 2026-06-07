@@ -11,8 +11,8 @@ public class Application {
 
 		UserProfile userProfile = new UserProfile(
 				"101",
-				"99933399",
-				"Muscat"
+				"0712345678",
+				" Muscat, Oman"
 		);
 
 		System.out.println("---User Profile---");
@@ -20,8 +20,8 @@ public class Application {
 		System.out.println("Phone Numbers :"+ userProfile.getPhoneNumber());
 		System.out.println("Address :" +userProfile.getAddress());
 
-		userProfile.setPhoneNumber("999324435");
-		userProfile.setAddress("Ibra");
+		userProfile.setPhoneNumber("0798765432");
+		userProfile.setAddress(" Ruwi, Muscat ");
 
 		System.out.println("---Update User Profile---");
 		System.out.println("User Id :" +userProfile.getUserId());
