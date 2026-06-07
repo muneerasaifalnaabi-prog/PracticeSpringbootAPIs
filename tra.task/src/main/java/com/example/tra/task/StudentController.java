@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class StudentController {
-    @Autowired
-    Student student = new Student();
 
-    @PutMapping("/updateStudent ")
+    Student student = new Student("1","Ali","A");
+
+    @PutMapping("/updateStudent")
     public String updateStudent(@RequestParam String newName){
         String oldName= student.getStudentName();
         student.setStudentName(newName);
