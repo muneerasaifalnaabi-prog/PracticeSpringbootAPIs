@@ -16,8 +16,7 @@ public class DeleteTaskDemo {
         for (String task :tasks){
             System.out.println("- " + task);
         }
-
-
+        String targetTask="Call doctor";
 
 
     }
