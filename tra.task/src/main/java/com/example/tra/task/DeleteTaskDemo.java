@@ -12,6 +12,8 @@ public class DeleteTaskDemo {
         tasks.add("Call doctor");
         tasks.add("Finish report");
 
+        System.out.println("Task List :: ");
+
 
 
 
