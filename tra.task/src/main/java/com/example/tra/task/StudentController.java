@@ -12,11 +12,6 @@ public class StudentController {
 
     @PutMapping("/updateStudent")
     public String updateStudent(@RequestParam String newName) {
-        String oldName = student.getStudentName();
-        student.setStudentName(newName);
-        return "Student Name Updated Successfully! \n " +
-                "Student ID: " + student.getStudentId() + "\n" +
-                "New Student Name:  " + student.getStudentName() + "\n" +
-                " Grade :" + student.getGrade();
+
     }
 }
