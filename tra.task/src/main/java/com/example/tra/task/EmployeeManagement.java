@@ -33,6 +33,12 @@ public class EmployeeManagement {
         }
         else {
             employees.add(employee);
+
+            System.out.println("Employee Added Successfully ");
+            System.out.println("Employee ID :"+employee.getEmpid());
+            System.out.println("Employee Name :"+employee.getEmpName());
+            System.out.println("Department :"+employee.getDepartment());
+
         }
 
 
