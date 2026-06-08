@@ -18,29 +18,29 @@ public class EmployeeManagement {
         System.out.println("Employee list");
         System.out.println(employees);
 
-        Employee employee = new Employee("E104","Ahmed Ali","IT");
+        Employee employee = new Employee("E104", "Ahmed Ali", "IT");
 
-        Boolean exists  =false ;
+        Boolean exists = false;
 
-        for (Employee e:employees){
-            if (e.getEmpid().equalsIgnoreCase(employee.getEmpid())){
-                exists  =true;
+        for (Employee e : employees) {
+            if (e.getEmpid().equalsIgnoreCase(employee.getEmpid())) {
+                exists = true;
                 break;
             }
         }
-        if (exists ){
+        if (exists) {
             System.out.println("Employee ID already exists ");
-        }
-        else {
+        } else {
             employees.add(employee);
 
             System.out.println("Employee Added Successfully ");
-            System.out.println("Employee ID :"+employee.getEmpid());
-            System.out.println("Employee Name :"+employee.getEmpName());
-            System.out.println("Department :"+employee.getDepartment());
-
+            System.out.println("Employee ID :" + employee.getEmpid());
+            System.out.println("Employee Name :" + employee.getEmpName());
+            System.out.println("Department :" + employee.getDepartment());
         }
 
+        System.out.println("New Employee List :");
+        System.out.println(employees);
 
     }
 }
