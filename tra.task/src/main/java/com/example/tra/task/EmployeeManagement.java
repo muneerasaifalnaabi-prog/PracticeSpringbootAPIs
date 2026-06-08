@@ -16,6 +16,7 @@ public class EmployeeManagement {
 
 
         System.out.println("Employee list");
+        System.out.println(employees);
 
     }
 }
