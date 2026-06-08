@@ -25,6 +25,7 @@ public class EmployeeManagement {
         for (Employee e:employees){
             if (e.getEmpid().equalsIgnoreCase(employee.getEmpid())){
                 exits =true;
+                break;
             }
         }
 
