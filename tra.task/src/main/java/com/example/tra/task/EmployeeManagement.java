@@ -20,15 +20,17 @@ public class EmployeeManagement {
 
         Employee employee = new Employee("E104","Ahmed Ali","IT");
 
-        Boolean exits =false ;
+        Boolean exists  =false ;
 
         for (Employee e:employees){
             if (e.getEmpid().equalsIgnoreCase(employee.getEmpid())){
-                exits =true;
+                exists  =true;
                 break;
             }
         }
-        if (exits)
+        if (exists ){
+            System.out.println("Employee ID already exists ");
+        }
 
 
     }
