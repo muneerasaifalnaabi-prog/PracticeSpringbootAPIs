@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @RestController
 @RequestMapping("/employees")
 public class EmployeeController {
@@ -18,8 +19,9 @@ public class EmployeeController {
         return employeeService.getAllEmployee();
 
     }
+
     @PostMapping
-    public String addEmployee(@RequestBody Employee employee){
+    public String addEmployee(@RequestBody Employee employee) {
         return employeeService.addEmployee(employee);
     }
 
