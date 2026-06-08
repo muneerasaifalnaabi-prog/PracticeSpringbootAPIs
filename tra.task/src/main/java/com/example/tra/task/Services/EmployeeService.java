@@ -11,11 +11,13 @@ public class EmployeeService {
 
     private List<Employee> employees = new ArrayList<>();
 
-
-    public List<Employee> getAllEmployee() {
+    public EmployeeService() {
         employees.add(new Employee("E101", "Sara", "HR"));
         employees.add(new Employee("E102", "Ahmed", "Finance"));
         employees.add(new Employee("E103", "Ali", "Sales"));
+    }
+
+    public List<Employee> getAllEmployee() {
 
         return employees;
 
@@ -31,11 +33,7 @@ public class EmployeeService {
 
         employees.add(newEmployee);
 
-        return "Employee Added Successfully\n" +
-                "Employee ID: " + newEmployee.getEmpid() + "\n" +
-                "Employee Name: " + newEmployee.getEmpName() + "\n" +
-                "Department: " + newEmployee.getDepartment() + "\n" +
-                "Status: Created";
+        return "Employee Added Successfully\n" + "Employee ID: " + newEmployee.getEmpid() + "\n" + "Employee Name: " + newEmployee.getEmpName() + "\n" + "Department: " + newEmployee.getDepartment() + "\n" + "Status: Created";
     }
 
 }
