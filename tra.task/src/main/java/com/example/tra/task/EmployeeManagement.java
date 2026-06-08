@@ -20,6 +20,8 @@ public class EmployeeManagement {
 
         Employee employee = new Employee("E104","Ahmed Ali","IT");
 
+        Boolean exits =false ;
+
 
     }
 }
