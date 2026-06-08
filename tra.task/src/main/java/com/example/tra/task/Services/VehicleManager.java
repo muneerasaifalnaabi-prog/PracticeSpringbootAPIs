@@ -19,5 +19,20 @@ public class VehicleManager {
     public List<Vehicle> getAllVehicles(){
         return vehicles;
     }
+    public String addVehicle(Vehicle vehicle) {
+        for (Vehicle v : vehicles) {
+            if (v.getVehicleId().equals(vehicle.getVehicleId())) {
+                return "Vehicle ID already exists. No vehicle was added.";
+            }
+        }
 
-}
+        vehicles.add(vehicle);
+
+        return "Vehicle Added Successfully\n" +
+                "Vehicle ID: " + vehicle.getVehicleId() + "\n" +
+                "Vehicle Model: " + vehicle.getVehicleModel() + "\n" +
+                "Rental Price Per Day: " + vehicle.getRentalPricePerDay() + " OMR";
+    }
+    }
+
+
