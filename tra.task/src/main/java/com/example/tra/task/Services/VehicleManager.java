@@ -15,4 +15,9 @@ public class VehicleManager {
         vehicles.add(new Vehicle("V102", "Nissan Sunny", 18));
         vehicles.add(new Vehicle("V103", "Hyundai Elantra", 22));
     }
+
+    public List<Vehicle> getAllVehicles(){
+        return vehicles;
+    }
+
 }
