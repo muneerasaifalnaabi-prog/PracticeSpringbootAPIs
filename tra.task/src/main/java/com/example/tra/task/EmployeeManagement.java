@@ -14,5 +14,8 @@ public class EmployeeManagement {
         employees.add(new Employee("E102", "Ahmed", "Finance"));
         employees.add(new Employee("E103", "Ali", "Sales"));
 
+
+        System.out.println("Employee list");
+
     }
 }
