@@ -12,7 +12,7 @@ public class EmployeeService {
     private List<Employee> employees = new ArrayList<>();
 
 
-    public List<Employee> getAllEmployee(){
+    public List<Employee> getAllEmployee() {
         employees.add(new Employee("E101", "Sara", "HR"));
         employees.add(new Employee("E102", "Ahmed", "Finance"));
         employees.add(new Employee("E103", "Ali", "Sales"));
