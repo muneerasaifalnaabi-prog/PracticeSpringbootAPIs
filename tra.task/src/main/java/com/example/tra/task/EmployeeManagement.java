@@ -22,6 +22,12 @@ public class EmployeeManagement {
 
         Boolean exits =false ;
 
+        for (Employee e:employees){
+            if (e.getEmpid().equalsIgnoreCase(employee.getEmpid())){
+                exits =true;
+            }
+        }
+
 
     }
 }
