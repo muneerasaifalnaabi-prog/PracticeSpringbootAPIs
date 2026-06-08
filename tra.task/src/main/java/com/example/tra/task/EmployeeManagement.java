@@ -31,6 +31,9 @@ public class EmployeeManagement {
         if (exists ){
             System.out.println("Employee ID already exists ");
         }
+        else {
+            employees.add(employee);
+        }
 
 
     }
