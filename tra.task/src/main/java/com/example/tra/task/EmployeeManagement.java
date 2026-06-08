@@ -16,7 +16,11 @@ public class EmployeeManagement {
 
 
         System.out.println("Employee list");
-        System.out.println(employees);
+       // System.out.println(employees);
+
+        for (Employee e: employees){
+            System.out.println(e);
+        }
 
         Employee employee = new Employee("E104", "Ahmed Ali", "IT");
 
@@ -40,7 +44,11 @@ public class EmployeeManagement {
         }
 
         System.out.println("New Employee List :");
-        System.out.println(employees);
+        //System.out.println(employees);
+
+        for (Employee e: employees){
+            System.out.println(e);
+        }
 
     }
 }
