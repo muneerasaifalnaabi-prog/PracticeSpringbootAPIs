@@ -10,5 +10,9 @@ public class EmployeeManagement {
 
         List<Employee> employees = new ArrayList<>();
 
+        employees.add(new Employee("E101", "Sara", "HR"));
+        employees.add(new Employee("E102", "Sara", "HR"));
+        employees.add(new Employee("E103", "Sara", "HR"));
+
     }
 }
