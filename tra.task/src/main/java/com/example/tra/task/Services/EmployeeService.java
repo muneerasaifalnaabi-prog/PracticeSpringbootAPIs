@@ -22,7 +22,9 @@ public class EmployeeService {
 
     public Employee addEmployee(Employee newEmployee) {
         if (employeeRepository.existsById(newEmployee.getEmpid())) {
-            System.out.println("employee ID Already Exits");
+           throw new RuntimeException(
+                   "Employee ID is Already exist"
+           );
         }
 
         return employeeRepository.save(newEmployee);
