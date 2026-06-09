@@ -1,6 +1,8 @@
 package com.example.tra.task.Services;
 
 import com.example.tra.task.Entities.Employee;
+import com.example.tra.task.Interfaces.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,6 +12,9 @@ import java.util.List;
 public class EmployeeService {
 
     private List<Employee> employees = new ArrayList<>();
+
+    @Autowired
+    EmployeeRepository employeeRepository;
 
     public EmployeeService() {
         employees.add(new Employee("E101", "Sara", "HR",new ArrayList<>(),new ArrayList<>()));
