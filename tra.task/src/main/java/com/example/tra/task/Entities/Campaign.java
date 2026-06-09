@@ -2,6 +2,9 @@ package com.example.tra.task.Entities;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +14,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 public class Campaign {
-    private String campaignId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer campaignId;
     private String campaignName;
     private String platform;
     private double budget;
