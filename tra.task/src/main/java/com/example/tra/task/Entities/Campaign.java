@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class Campaign {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer campaignId;
+    private String campaignId;
     private String campaignName;
     private String platform;
     private double budget;
