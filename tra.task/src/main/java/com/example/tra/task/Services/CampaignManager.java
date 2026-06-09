@@ -16,6 +16,7 @@ public class CampaignManager {
         campaigns.add(new Campaign("C103", "Email Promo", "Email", 300));
     }
 
+
     public List<Campaign> getAllCampaigns() {
         return campaigns;
     }
