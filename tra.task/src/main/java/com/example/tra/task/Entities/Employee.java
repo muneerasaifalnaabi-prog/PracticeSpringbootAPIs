@@ -15,7 +15,7 @@ import java.util.List;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String empid;
+    private Integer empid;
     private String empName;
     private String Department;
     @OneToMany
