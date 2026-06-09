@@ -10,9 +10,9 @@ public class EmployeeManagement {
 
         List<Employee> employees = new ArrayList<>();
 
-        employees.add(new Employee("E101", "Sara", "HR",new ArrayList<>()));
-        employees.add(new Employee("E102", "Ahmed", "Finance", new ArrayList<>()));
-        employees.add(new Employee("E103", "Ali", "Sales", new ArrayList<>()));
+        employees.add(new Employee("E101", "Sara", "HR",new ArrayList<>(),new ArrayList<>()));
+        employees.add(new Employee("E102", "Ahmed", "Finance", new ArrayList<>(),new ArrayList<>()));
+        employees.add(new Employee("E103", "Ali", "Sales", new ArrayList<>(),new ArrayList<>()));
 
 
         System.out.println("Employee list");
@@ -22,7 +22,7 @@ public class EmployeeManagement {
             System.out.println(e);
         }
 
-        Employee employee = new Employee("E104", "Ahmed Ali", "IT",new ArrayList<>());
+        Employee employee = new Employee("E104", "Ahmed Ali", "IT",new ArrayList<>(),new ArrayList<>());
 
         Boolean exists = false;
 

@@ -20,4 +20,6 @@ public class Employee {
     private String Department;
     @OneToMany
     List<Campaign> campaigns;
+    @OneToMany
+    List<Vehicle> vehicles;
 }
