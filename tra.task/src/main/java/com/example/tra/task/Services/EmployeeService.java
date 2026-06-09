@@ -10,35 +10,24 @@ import java.util.List;
 
 @Service
 public class EmployeeService {
-
-    private List<Employee> employees = new ArrayList<>();
-
     @Autowired
     EmployeeRepository employeeRepository;
 
-    public EmployeeService() {
-        employees.add(new Employee("E101", "Sara", "HR",new ArrayList<>(),new ArrayList<>()));
-        employees.add(new Employee("E102", "Ahmed", "Finance",new ArrayList<>(),new ArrayList<>()));
-        employees.add(new Employee("E103", "Ali", "Sales",new ArrayList<>(),new ArrayList<>()));
-    }
 
     public List<Employee> getAllEmployee() {
 
-        return employees;
+        return employeeRepository.findAll();
 
     }
 
-    public String addEmployee(Employee newEmployee) {
-
-        for (Employee employee : employees) {
-            if (employee.getEmpid().equals(newEmployee.getEmpid())) {
-                return "Employee ID already exists. No employee was created.";
-            }
+    public Employee addEmployee(Employee newEmployee) {
+        if (employeeRepository.existsById(newEmployee.getEmpid())) {
+            System.out.println("employee ID Already Exits");
         }
 
-        employees.add(newEmployee);
+        return employeeRepository.save(newEmployee);
 
-        return "Employee Added Successfully\n" + "Employee ID: " + newEmployee.getEmpid() + "\n" + "Employee Name: " + newEmployee.getEmpName() + "\n" + "Department: " + newEmployee.getDepartment() + "\n" + "Status: Created";
+
     }
-
 }
+
