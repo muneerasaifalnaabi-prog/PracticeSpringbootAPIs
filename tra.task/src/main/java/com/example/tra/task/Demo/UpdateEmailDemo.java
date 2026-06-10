@@ -1,4 +1,4 @@
-package com.example.tra.task;
+package com.example.tra.task.Demo;
 
 public class UpdateEmailDemo {
     public static void main(String[] args) {

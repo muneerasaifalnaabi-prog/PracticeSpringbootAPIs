@@ -1,4 +1,4 @@
-package com.example.tra.task;
+package com.example.tra.task.Demo;
 
 import com.example.tra.task.Entities.Employee;
 
@@ -10,9 +10,9 @@ public class EmployeeManagement {
 
         List<Employee> employees = new ArrayList<>();
 
-        employees.add(new Employee("E101", "Sara", "HR",new ArrayList<>(),new ArrayList<>()));
-        employees.add(new Employee("E102", "Ahmed", "Finance", new ArrayList<>(),new ArrayList<>()));
-        employees.add(new Employee("E103", "Ali", "Sales", new ArrayList<>(),new ArrayList<>()));
+        employees.add(new Employee(101, "Sara", "HR",new ArrayList<>(),new ArrayList<>()));
+        employees.add(new Employee(102, "Ahmed", "Finance", new ArrayList<>(),new ArrayList<>()));
+        employees.add(new Employee(103, "Ali", "Sales", new ArrayList<>(),new ArrayList<>()));
 
 
         System.out.println("Employee list");
@@ -22,12 +22,12 @@ public class EmployeeManagement {
             System.out.println(e);
         }
 
-        Employee employee = new Employee("E104", "Ahmed Ali", "IT",new ArrayList<>(),new ArrayList<>());
+        Employee employee = new Employee(104, "Ahmed Ali", "IT",new ArrayList<>(),new ArrayList<>());
 
         Boolean exists = false;
 
         for (Employee e : employees) {
-            if (e.getEmpid().equalsIgnoreCase(employee.getEmpid())) {
+            if (e.getEmpid().equals(employee.getEmpid())) {
                 exists = true;
                 break;
             }

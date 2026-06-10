@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/employees")
+@RequestMapping("employee")
 public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
@@ -19,10 +19,26 @@ public class EmployeeController {
         return employeeService.getAllEmployee();
 
     }
+    @GetMapping("/getById")
+    public Employee getById(@RequestParam Integer id) {
+        return employeeService.getEmployeeById(id);
+    }
+
+    @GetMapping("/getEmployeeNameById")
+    public String getEmployeeNameById(@RequestParam Integer id) {
+        return employeeService.getEmployeeNameById(id);
+    }
 
     @PostMapping
     public Employee addEmployee(@RequestBody Employee employee) {
         return employeeService.addEmployee(employee);
     }
+    @DeleteMapping("/delete")
+    public String deleteEmployee(@RequestParam Integer id) {
+        return employeeService.deleteEmployee(id);
+    }
+
+
+
 
 }

@@ -13,7 +13,7 @@ public class EmployeeService {
     @Autowired
     EmployeeRepository employeeRepository;
 
- //getall
+    //getall
     public List<Employee> getAllEmployee() {
 
         return employeeRepository.findAll();
@@ -22,14 +22,13 @@ public class EmployeeService {
 
     public Employee addEmployee(Employee newEmployee) {
         if (employeeRepository.existsById(newEmployee.getEmpid())) {
-           throw new RuntimeException(
-                   "Employee ID is Already exist"
-           );
+            throw new RuntimeException("Employee ID is Already exist");
         }
         return employeeRepository.save(newEmployee);
     }
+
     //update :
-    public Employee updateEmployee(Integer id,String name, String department) {
+    public Employee updateEmployee(Integer id, String name, String department) {
         Employee employee = employeeRepository.findById(id).get();
         employee.setEmpName(name);
         employee.setDepartment(department);
@@ -38,8 +37,8 @@ public class EmployeeService {
 
     //Delete :
 
-    public String deleteEmployee(Integer id){
-        if (employeeRepository.existsById(id)){
+    public String deleteEmployee(Integer id) {
+        if (!employeeRepository.existsById(id)) {
             return "ID NOT FOUND";
         }
         employeeRepository.deleteById(id);
@@ -56,6 +55,9 @@ public class EmployeeService {
         return employeeRepository.findById(id).get().getEmpName();
     }
 
+    public String getEmployeeDeptById(Integer id) {
+        return employeeRepository.findById(id).get().getDepartment();
+    }
 
 
 }
