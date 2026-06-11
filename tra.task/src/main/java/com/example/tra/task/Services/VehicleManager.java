@@ -1,7 +1,7 @@
 package com.example.tra.task.Services;
 
 import com.example.tra.task.Entities.Vehicle;
-import com.example.tra.task.Repositories.VehicleRepository;
+import com.example.tra.task.Interfaces.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

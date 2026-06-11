@@ -15,7 +15,7 @@ public class VehicleController {
     VehicleManager vehicleManager;
 
     @PostMapping("/addVehicle")
-    public String addVehicle(@RequestBody Vehicle vehicle) {
+    public Vehicle addVehicle(@RequestBody Vehicle vehicle) {
         return vehicleManager.addVehicle(vehicle);
     }
 
@@ -30,13 +30,13 @@ public class VehicleController {
     }
 
     @PutMapping("/update/{id}")
-    public String updateVehicle(@PathVariable Integer id,
-                                @RequestBody Vehicle vehicle) {
+    public Vehicle updateVehicle(@PathVariable Integer id,
+                                 @RequestBody Vehicle vehicle) {
         return vehicleManager.updateVehicle(id, vehicle);
     }
 
     @DeleteMapping("/delete")
-    public String deleteVehicle(@RequestParam Integer id) {
+    public Boolean deleteVehicle(@RequestParam Integer id) {
         return vehicleManager.deleteVehicle(id);
     }
 }
