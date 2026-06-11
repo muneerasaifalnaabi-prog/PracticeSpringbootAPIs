@@ -15,7 +15,7 @@ public class CampaignController {
     CampaignManager campaignManager;
 
     @PostMapping("/addCampaign")
-    public String addCampaign(@RequestBody Campaign campaign) {
+    public Campaign addCampaign(@RequestBody Campaign campaign) {
         return campaignManager.addCampaign(campaign);
     }
 
@@ -29,14 +29,19 @@ public class CampaignController {
         return campaignManager.getCampaignById(id);
     }
 
+    @GetMapping("/getByName")
+    public Campaign getCampaignByName(@RequestParam String campaignName) {
+        return campaignManager.getCampaignByName(campaignName);
+    }
+
     @PutMapping("/update/{id}")
-    public String updateCampaign(@PathVariable Integer id,
-                                 @RequestBody Campaign campaign) {
+    public Campaign updateCampaign(@PathVariable Integer id,
+                                   @RequestBody Campaign campaign) {
         return campaignManager.updateCampaign(id, campaign);
     }
 
     @DeleteMapping("/delete")
-    public String deleteCampaign(@RequestParam Integer id) {
+    public Boolean deleteCampaign(@RequestParam Integer id) {
         return campaignManager.deleteCampaign(id);
     }
 }

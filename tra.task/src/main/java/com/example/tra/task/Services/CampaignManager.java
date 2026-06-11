@@ -1,73 +1,52 @@
 package com.example.tra.task.Services;
 
 import com.example.tra.task.Entities.Campaign;
+import com.example.tra.task.Interfaces.CampaignRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class CampaignManager {
 
-    private List<Campaign> campaigns = new ArrayList<>();
+    @Autowired
+    CampaignRepository campaignRepository;
 
-    public CampaignManager() {
-        campaigns.add(new Campaign(1, "Summer Sale", "Instagram", 500));
-        campaigns.add(new Campaign(2, "Black Friday", "Google Ads", 1000));
-        campaigns.add(new Campaign(3, "Email Promo", "Email", 300));
+    public Campaign addCampaign(Campaign campaign) {
+        return campaignRepository.save(campaign);
     }
 
     public List<Campaign> getAllCampaigns() {
-        return campaigns;
-    }
-
-    public String addCampaign(Campaign newCampaign) {
-
-        for (Campaign campaign : campaigns) {
-            if (campaign.getCampaignId().equals(newCampaign.getCampaignId())) {
-                return "Campaign ID already exists.";
-            }
-        }
-
-        campaigns.add(newCampaign);
-        return "Campaign Created Successfully";
+        return campaignRepository.findAll();
     }
 
     public Campaign getCampaignById(Integer id) {
-
-        if (id == null) {
-            throw new RuntimeException("Campaign ID cannot be null");
-        }
-
-        for (Campaign campaign : campaigns) {
-            if (campaign.getCampaignId().equals(id)) {
-                return campaign;
-            }
-        }
-
-        throw new RuntimeException("Campaign not found");
+        return campaignRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Campaign not found"));
     }
 
-    public String updateCampaign(Integer id, Campaign updatedCampaign) {
-
-        Campaign campaignToUpdate = getCampaignById(id);
-
-        campaignToUpdate.setCampaignName(updatedCampaign.getCampaignName());
-        campaignToUpdate.setPlatform(updatedCampaign.getPlatform());
-        campaignToUpdate.setBudget(updatedCampaign.getBudget());
-
-        return "Campaign Updated Successfully";
+    public Campaign getCampaignByName(String name) {
+        return campaignRepository.getCampaignByName(name);
     }
 
-    public String deleteCampaign(Integer id) {
+    public Campaign updateCampaign(Integer id, Campaign updatedCampaign) {
 
         Campaign campaign = getCampaignById(id);
 
-        if (campaign != null) {
-            campaigns.remove(campaign);
-            return "Campaign Deleted Successfully";
-        }
+        campaign.setCampaignName(updatedCampaign.getCampaignName());
+        campaign.setPlatform(updatedCampaign.getPlatform());
+        campaign.setBudget(updatedCampaign.getBudget());
 
-        return "Campaign Not Found";
+        return campaignRepository.save(campaign);
+    }
+
+    public Boolean deleteCampaign(Integer id) {
+
+        Campaign campaign = getCampaignById(id);
+
+        campaignRepository.delete(campaign);
+        return true;
     }
 }
