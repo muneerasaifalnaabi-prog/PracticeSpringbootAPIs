@@ -10,16 +10,33 @@ import java.util.List;
 @RestController
 @RequestMapping("/campaigns")
 public class CampaignController {
+
     @Autowired
     CampaignManager campaignManager;
 
-    @GetMapping
+    @PostMapping("/addCampaign")
+    public String addCampaign(@RequestBody Campaign campaign) {
+        return campaignManager.addCampaign(campaign);
+    }
+
+    @GetMapping("/getAll")
     public List<Campaign> getAllCampaigns() {
         return campaignManager.getAllCampaigns();
     }
 
-    @PostMapping
-    public String addCampaign(@RequestBody Campaign campaign) {
-        return campaignManager.addCampaign(campaign);
+    @GetMapping("/getById")
+    public Campaign getCampaignById(@RequestParam Integer id) {
+        return campaignManager.getCampaignById(id);
+    }
+
+    @PutMapping("/update/{id}")
+    public String updateCampaign(@PathVariable Integer id,
+                                 @RequestBody Campaign campaign) {
+        return campaignManager.updateCampaign(id, campaign);
+    }
+
+    @DeleteMapping("/delete")
+    public String deleteCampaign(@RequestParam Integer id) {
+        return campaignManager.deleteCampaign(id);
     }
 }
